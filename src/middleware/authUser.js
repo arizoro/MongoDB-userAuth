@@ -5,7 +5,6 @@ export const authUser = async( req, res,next ) => {
     const header = req.headers["authorization"]
 
     const token = header && header.split(" ")[1]
-    console.log(token , '<<<token')
     if(token == null){
         return res.status(401).json({
             error : "Unauthorize"
